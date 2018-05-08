@@ -32,8 +32,20 @@
             {% if event.location == 'New York City, NY' %}
               <div class="row">
                 <div class="col-md-6 my-2">
+                  {% if event.title == 'Nikkah' %}
                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.959183559019!2d-73.72875898470853!3d40.67486827933598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2640b72206e57%3A0xcb19defe1bd5b5c0!2s34+Holland+Ct%2C+Valley+Stream%2C+NY+11580!5e0!3m2!1sen!2sus!4v1525669266056"
                     width="480" height="350" frameborder="0" style="border:1" allowfullscreen=""></iframe>
+                  {% elif event.title == 'Mehndi' %}
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.959183559019!2d-73.72875898470853!3d40.67486827933598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2640b72206e57%3A0xcb19defe1bd5b5c0!2s34+Holland+Ct%2C+Valley+Stream%2C+NY+11580!5e0!3m2!1sen!2sus!4v1525669266056"
+                    width="480" height="350" frameborder="0" style="border:1" allowfullscreen=""></iframe>
+                  {% elif event.title == 'Shaddi' %}
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.0015499525402!2d-73.76210138469706!3d40.76199064249272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c261e2b21e783f%3A0x7ecaba271c46f48e!2sAdria+Hotel+%26+Conference+Center!5e0!3m2!1sen!2sus!4v1525763192634" 
+                    width="480" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+                  {% elif event.title == 'Walima' %}
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3032.2537388182755!2d-88.99927638470318!3d40.53598295630219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880b713f5022b933%3A0x627f37123298b687!2sRadisson+Hotel+%26+Conference+Center+Bloomington+-+Normal!5e0!3m2!1sen!2sus!4v1525763336004" 
+                    width="480" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+                  {% endif %}
+                  
                 </div>
                 <div class="col-md-6 my-2">
                   <h1 class="text-primary flex-row-reverse">{{event.title}}</h1>
@@ -69,8 +81,19 @@
             {% if event.location == 'Normal, IL' %}
                 <div class="row">
                 <div class="col-md-6 my-2">
+                    {% if event.title == 'Nikkah' %}
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.959183559019!2d-73.72875898470853!3d40.67486827933598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2640b72206e57%3A0xcb19defe1bd5b5c0!2s34+Holland+Ct%2C+Valley+Stream%2C+NY+11580!5e0!3m2!1sen!2sus!4v1525669266056"
-                    width="480" height="350" frameborder="0" style="border:1" allowfullscreen=""></iframe>
+                      width="480" height="350" frameborder="0" style="border:1" allowfullscreen=""></iframe>
+                    {% elif event.title == 'Mehndi' %}
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.959183559019!2d-73.72875898470853!3d40.67486827933598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2640b72206e57%3A0xcb19defe1bd5b5c0!2s34+Holland+Ct%2C+Valley+Stream%2C+NY+11580!5e0!3m2!1sen!2sus!4v1525669266056"
+                      width="480" height="350" frameborder="0" style="border:1" allowfullscreen=""></iframe>
+                    {% elif event.title == 'Shaddi' %}
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.0015499525402!2d-73.76210138469706!3d40.76199064249272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c261e2b21e783f%3A0x7ecaba271c46f48e!2sAdria+Hotel+%26+Conference+Center!5e0!3m2!1sen!2sus!4v1525763192634" 
+                      width="480" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    {% elif event.title == 'Walima' %}
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3032.2537388182755!2d-88.99927638470318!3d40.53598295630219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880b713f5022b933%3A0x627f37123298b687!2sRadisson+Hotel+%26+Conference+Center+Bloomington+-+Normal!5e0!3m2!1sen!2sus!4v1525763336004" 
+                      width="480" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    {% endif %}
                 </div>
                 <div class="col-md-6 my-2">
                     <h1 class="text-primary flex-row-reverse">{{event.title}}</h1>
@@ -106,8 +129,19 @@
             {% if event.location == 'Karachi, Pakistan' %}
                 <div class="row">
                 <div class="col-md-6 my-2">
+                    {% if event.title == 'Nikkah' %}
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.959183559019!2d-73.72875898470853!3d40.67486827933598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2640b72206e57%3A0xcb19defe1bd5b5c0!2s34+Holland+Ct%2C+Valley+Stream%2C+NY+11580!5e0!3m2!1sen!2sus!4v1525669266056"
-                    width="480" height="350" frameborder="0" style="border:1" allowfullscreen=""></iframe>
+                      width="480" height="350" frameborder="0" style="border:1" allowfullscreen=""></iframe>
+                    {% elif event.title == 'Mehndi' %}
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.959183559019!2d-73.72875898470853!3d40.67486827933598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2640b72206e57%3A0xcb19defe1bd5b5c0!2s34+Holland+Ct%2C+Valley+Stream%2C+NY+11580!5e0!3m2!1sen!2sus!4v1525669266056"
+                      width="480" height="350" frameborder="0" style="border:1" allowfullscreen=""></iframe>
+                    {% elif event.title == 'Shaddi' %}
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.0015499525402!2d-73.76210138469706!3d40.76199064249272!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c261e2b21e783f%3A0x7ecaba271c46f48e!2sAdria+Hotel+%26+Conference+Center!5e0!3m2!1sen!2sus!4v1525763192634" 
+                      width="480" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    {% elif event.title == 'Walima' %}
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d462116.66838747653!2d66.8752693445442!3d25.19355992698018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e06651d4bbf%3A0x9cf92f44555a0c23!2sKarachi%2C+Karachi+City%2C+Sindh%2C+Pakistan!5e0!3m2!1sen!2sus!4v1525763396683" 
+                      width="480" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    {% endif %}
                 </div>
                 <div class="col-md-6 my-2">
                     <h1 class="text-primary flex-row-reverse">{{event.title}}</h1>
