@@ -1,0 +1,57 @@
+{% extends "weddingapp/header.html" %}
+{% block content%}
+        <div class="py-4 filter-dark" style="background-image: url('https://i.imgur.com/1TXryyk.jpg');background-position:center center;">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <h1 class="display-1 text-primary">Events</h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="py-5 bg-light">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <h1 class="text-center display-3 text-primary">{{event.title}} - {{event.date|date:'D'}} {{event.date}}</h1>
+                <p class="text-center">{{event.description|safe}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="py-5 text-white bg-secondary">
+          <div class="container">
+            <div class="row">
+              <div class="align-self-center p-2 col-md-6">
+                <h1 class="mb-4">{{event.location}}</h1>
+                <h3 class="text-light">Timeline</h3>
+                <p>{{event.timeline|safe|linebreaks}}</p>
+                <h3 class="text-light">Dresscode</h3>
+                <p class="">{{event.dressCode}}</p>
+                <h3 class="text-light">Duration</h3>
+                <p class="">{{event.duration}} Hours</p>
+                  <div title="Add to Calendar" class="addeventatc">
+                    Add to Calendar
+                    <span class="start">{{event.date|date:'m/d/Y h:i A'}}</span>
+                    <span class="timezone">
+                      {% if event.location == 'New York City, NY' %}
+                      America/New_york
+                      {% elif event.location == 'Normal, IL' %}
+                      America/Chicago
+                      {% elif event.location == 'Karachi, Pakistan' %}
+                      Pakistan/Karachi
+                      {% endif %}
+                    </span>
+                    <span class="title">Khushi and Zain's {{event.title}}</span>
+                    <span class="description">{{event.description}}</span>
+                    <span class="location">{{event.address}}</span>
+                  </div>
+              </div>
+              <div class="col-md-6 p-0">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.959183559019!2d-73.72875898470853!3d40.67486827933598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2640b72206e57%3A0xcb19defe1bd5b5c0!2s34+Holland+Ct%2C+Valley+Stream%2C+NY+11580!5e0!3m2!1sen!2sus!4v1525669266056"
+                    width="500" height="500" frameborder="0" style="border:1" allowfullscreen=""></iframe>
+              </div>
+            </div>
+          </div>
+        </div>    
+{% endblock %}

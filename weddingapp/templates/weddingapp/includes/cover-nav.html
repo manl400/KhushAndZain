@@ -1,0 +1,13 @@
+{% block content %}
+<header class="masthead mb-auto">
+        <div class="inner">
+            <h3 class="masthead-brand">K&Z</h3>
+            <nav class="nav nav-masthead justify-content-center">
+                <a class="{% if navbar == 'index' %}nav-link active{% else %}nav-link{% endif %}" href="{% url 'index' %}">Home</a>
+                <a class="nav-link" href="#">Travel</a>
+                <a class="{% if navbar == 'events' %}nav-link active{% else %}nav-link{% endif %}" href="{% url 'events' %}">Events</a>
+                <a class="{% if navbar == 'feed' %}nav-link active{% else %}nav-link{% endif %}" href="{% url 'feed' %}">Feed</a>
+            </nav>
+        </div>
+</header>
+{%endblock%}

@@ -1,0 +1,74 @@
+{% extends "weddingapp/header.html" %}
+{% block content %}
+
+<div class="py-4 filter-dark" style="background-image: url('https://i.imgur.com/1TXryyk.jpg');background-position:center center;">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="display-1 text-primary">Events</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="nav nav-tabs">
+            <li class="nav-item">
+              <a href="" class="active nav-link" data-toggle="tab" data-target="#tabone">New York City, NY
+                <br> </a>
+            </li>
+            <li class="nav-item">
+              <a href="" class="nav-link" data-toggle="tab" data-target="#tabtwo">Normal, IL</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="" data-toggle="tab" data-target="#tabthree">Karachi, Pakistan</a>
+            </li>
+          </ul>
+          <div class="tab-content mt-2">
+            <div class="tab-pane fade show active" id="tabone" role="tabpanel">
+              <div class="row">
+                <div class="col-md-6 my-2">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.959183559019!2d-73.72875898470853!3d40.67486827933598!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2640b72206e57%3A0xcb19defe1bd5b5c0!2s34+Holland+Ct%2C+Valley+Stream%2C+NY+11580!5e0!3m2!1sen!2sus!4v1525669266056"
+                    width="480" height="350" frameborder="0" style="border:1" allowfullscreen=""></iframe>
+                </div>
+                <div class="col-md-6 my-2">
+                  <h1 class="text-primary flex-row-reverse">Nikkah</h1>
+                  <p class="lead">Here the exchanging of the vows and the acceptance of marriage by both the bride and groom takes place.</p>
+                  <ul class="">
+                    <li>Date: Friday June 29th 2018&nbsp;</li>
+                    <li>Time: 1:00pm-3:00pm</li>
+                  </ul>
+                  <a class="btn btn-primary btn-lg" href="#">Add to Calander</a>
+                  <a class="btn btn-primary m-2 btn-lg" href="#">Button </a>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 my-2" ><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.001734689538!2d-73.76210138470576!3d40.761986579326546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c261e2b21e783f%3A0x7ecaba271c46f48e!2sAdria+Hotel+%26+Conference+Center!5e0!3m2!1sen!2sus!4v1525670015405" width="480" height="350" frameborder="0" style="border:1" allowfullscreen></iframe></div>
+                <div class="col-md-6 my-2">
+                  <h1 class="text-primary flex-row-reverse">Shaddi</h1>
+                  <p class="lead">The actual wedding takes place.</p>
+                  <ul class="">
+                    <li>Date: Saturday June 30th 2018&nbsp;</li>
+                    <li>Time: 7:00pm-12:00am</li>
+                  </ul>
+                  <a class="btn btn-primary btn-lg" href="#">Add to Calander</a>
+                  <a class="btn btn-primary m-2 btn-lg" href="#">Button </a>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="tabtwo" role="tabpanel">
+              <p class="">Tab pane two. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="tab-pane fade" id="tabthree" role="tabpanel">
+              <p class="">Tab pane three. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}	
+

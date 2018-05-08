@@ -1,0 +1,13 @@
+{% for post in object_list %}
+    <a href="/feed/{{post.id}}" class="list-group-item list-group-item-action flex-column align-items-start 
+    {% if post == object_list|first %}
+        active
+    {% endif %}">
+        <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">{{post.title}}</h5>
+        <small>{{ post.date|date:"m-d-Y P"}}</small>
+        </div>
+        <p class="mb-1">{{post.body}}</p>
+        <small>Author: {{post.author}}</small>
+    </a>
+{% endfor %}

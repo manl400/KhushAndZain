@@ -1,0 +1,51 @@
+{% extends "weddingapp/header.html" %}
+
+{% block content%}
+    <div class="py-4 filter-dark" style="background-image: url('https://i.imgur.com/1TXryyk.jpg');background-position:center center;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1 class="display-1 text-primary">Live Feed</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="py-4 filter-light">
+        <div class="container">
+            <div class="row">
+            <div class="col-md-12">
+                <div id="container" class="list-group">
+                {% for post in object_list %}
+                <a href="/feed/{{post.id}}" class="list-group-item list-group-item-action flex-column align-items-start 
+                {% if post == object_list|first %}
+                    active
+                {% endif %}">
+                    <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">{{post.title}}</h5>
+                    <small>{{ post.date|date:"m-d-Y P"}}</small>
+                    </div>
+                    <p class="mb-1">{{post.body}}</p>
+                    <small>Author: {{post.author}}</small>
+                </a>
+                {% endfor %}
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script>
+            var append_increment = 0;
+            setInterval(function() {
+                $.ajax({
+                    type: "GET",
+                    url: "{% url 'getfeed' %}",  // URL to your view that serves new info
+                    data: {'append_increment': append_increment}
+                })
+                .done(function(response) {
+                    $('#container').html(response);
+                    append_increment += 10;
+                });
+            }, 10000)
+        </script>
+
+{% endblock %}

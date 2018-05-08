@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% load staticfiles %}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/theme.css' %}" type="text/css">
+  <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md bg-primary navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="{% url 'index' %}">
+        <i class="fa d-inline fa-lg fa-heart"></i>
+        <b class="px-1">K&amp;Z</b>
+      </a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbar2SupportedContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse text-center justify-content-end" id="navbar2SupportedContent">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link {% if navbar == 'travel' %}active{% endif %}" href="{% url 'travel' %}">
+              <i class="fa d-inline fa-lg fa-plane"></i>&nbsp;Travel</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {% if navbar == 'events' %}active{% endif %}" href="{% url 'events' %}">
+              <i class="fa d-inline fa-lg fa-calendar"></i>&nbsp;Events</a>
+          </li>
+        </ul>
+        <a class="btn navbar-btn ml-2 text-white btn-secondary" href="{% url 'feed' %}">
+          <i class="fa d-inline fa-lg fa-play"></i>&nbsp;Feed</a>
+      </div>
+    </div>
+  </nav>
+  {% block content %}
+  {% endblock %}	
+  <div class="bg-dark text-white">
+    <div class="container">
+      <div class="row">
+        <div class="p-4 col-md-4">
+          <h2 class="mb-4 text-secondary">Source Code</h2>
+          <p>
+            <a href="mailto:info@pingendo.com" class="text-white">
+              <i class="fa d-inline mr-3 text-secondary fa-envelope-o"></i>V</a>arietycube.info@gmail.com</p>
+        </div>
+        <div class="p-4 col-md-4">
+          <h2 class="mb-4 text-secondary">Mapsite</h2>
+          <ul class="list-unstyled">
+            <a href="{% url 'index' %}" class="text-white">Home</a>
+            <br>
+            <a href="{% url 'travel' %}" class="text-white">Travel</a>
+            <br>
+            <a href="{% url 'events' %}" class="text-white">Events</a>
+            <br>
+			<a href="{% url 'feed' %}" class="text-white">Live feed</a>
+			<br>
+            <a href="/admin" class="text-white">Admin</a>
+          </ul>
+        </div>
+        <div class="p-4 col-md-4">
+          <h2 class="mb-4">Contact</h2>
+          <p>
+            <a href="tel:+1630-205-6305" class="text-white">
+              <i class="fa d-inline mr-3 text-secondary fa-phone"></i>+1630-205-6305</a></p>
+          <p>
+            <a href="mailto:info@pingendo.com" class="text-white">
+              <i class="fa d-inline mr-3 text-secondary fa-envelope-o"></i>Varietycube.info@gmail.com</a></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 mt-3">
+          <p class="text-center text-white">Made with love by Zain Ashraf, using <a href="https://www.djangoproject.com/">Django</a> and <a href="https://getbootstrap.com/">Bootstrap</a>. </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
