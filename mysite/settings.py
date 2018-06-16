@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'weddingapp',
     'feed',
     'events',
+    'RSVP',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

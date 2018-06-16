@@ -299,3 +299,4 @@ __pycache__/
 *.xsd.cs
 
 .vscode/
+.env

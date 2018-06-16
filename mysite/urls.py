@@ -20,6 +20,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('weddingapp.urls')),
     url(r'^feed/', include('feed.urls')),
-    url(r'^events/', include('events.urls'))
+    url(r'^events/', include('events.urls')),
+    url(r'^RSVP/', include('RSVP.urls'))
 
 ]

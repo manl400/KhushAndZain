@@ -49,9 +49,13 @@
             <a class="nav-link {% if navbar == 'events' %}active{% endif %}" href="{% url 'events' %}">
               <i class="fa d-inline fa-lg fa-calendar"></i>&nbsp;Events</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link {% if navbar == 'feed' %}active{% endif %}" href="{% url 'feed' %}">
+              <i class="fa d-inline fa-lg fa-play"></i>&nbsp;Feed</a>
+          </li>
         </ul>
-        <a class="btn navbar-btn ml-2 text-white btn-secondary" href="{% url 'feed' %}">
-          <i class="fa d-inline fa-lg fa-play"></i>&nbsp;Feed</a>
+        <a class="btn navbar-btn ml-2 text-white btn-secondary" href="{% url 'RSVP' %}">
+          <i class="fa d-inline fa-lg fa-calendar-check-o"></i>&nbsp;RSVP</a>
       </div>
     </div>
   </nav>
