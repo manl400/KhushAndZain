@@ -14,7 +14,7 @@
             <div class="row">
               <div class="col-md-12">
                 <h1 class="text-center display-3 text-primary">{{event.title}} - {{event.date|date:'D'}} {{event.date}}</h1>
-                <p class="text-center">{{event.description|safe}}</p>
+                <p class="text-center">{{event.description|safe|urlize}}</p>
               </div>
             </div>
           </div>
@@ -43,7 +43,7 @@
                       {% endif %}
                     </span>
                     <span class="title">Khushi and Zain's {{event.title}}</span>
-                    <span class="description">{{event.description}}</span>
+                    <span class="description">{{event.description|urlize}}</span>
                     <span class="location">{{event.address}}</span>
                   </div>
               </div>
