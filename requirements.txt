@@ -6,6 +6,6 @@ Unipath==1.0
 python-decouple==3
 Pillow==3.3.0
 Markdown==2.6.6
-bleach==1.4.3
+bleach==3.1.4
 whitenoise==3.3.1
 psycopg2==2.7.4
